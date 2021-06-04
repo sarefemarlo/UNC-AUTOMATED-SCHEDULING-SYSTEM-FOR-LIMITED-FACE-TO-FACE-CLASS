@@ -1,0 +1,211 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charSet="UTF-8"/>
+    <title>Figma Prototype Export</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        /* OWN CSS */
+        body {
+            font-family: Helvetica, sans-serif;
+        }
+
+        li:first-child {
+            margin-bottom: 8pt;
+        }
+
+        #helper {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            position: fixed;
+            bottom: 16pt;
+            right: 16pt;
+            padding: 8pt;
+            border-radius: 4pt;
+        }
+
+        #helper svg {
+            margin-right: 4pt;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+    </style>
+
+    <script>
+      const frames = {"2w968":{"id":"2w968","name":"Frame-1","clickableChildren":{"118w4":{"name":"Group 62","destination":"118w118","x":112,"y":600,"w":187,"h":31,"rotation":0},"118w5":{"name":"login button","type":"FRAME","x":112,"y":600,"rotation":0}}},"118w118":{"id":"118w118","name":"Frame-2","clickableChildren":{"118w63":{"name":"Rectangle 74","destination":"205w2","x":116,"y":114,"w":11,"h":10,"rotation":0,"parent":"118w118"},"118w64":{"name":"Rectangle 75","destination":"133w0","x":206,"y":115,"w":11,"h":10,"rotation":0,"parent":"118w118"},"118w91":{"name":"Frame 4","type":"FRAME","x":26,"y":138,"rotation":0},"118w187":{"name":"Group 66","destination":"118w254","x":22,"y":12,"w":319,"h":272,"rotation":0,"parent":"118w91"},"118w239":{"name":"Frame 6","type":"FRAME","x":42.3927001953125,"y":28.82474136352539,"rotation":0},"118w195":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":35,"y":72,"rotation":0},"118w242":{"name":"Frame 9","type":"FRAME","x":42.3927001953125,"y":877.8247680664062,"rotation":0},"118w234":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":35,"y":921,"rotation":0},"118w240":{"name":"Frame 7","type":"FRAME","x":40.3927001953125,"y":311.8247375488281,"rotation":0},"118w208":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":33,"y":355,"rotation":0},"118w241":{"name":"Frame 8","type":"FRAME","x":42.3927001953125,"y":594.8247680664062,"rotation":0},"118w221":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":35,"y":638,"rotation":0},"216w2":{"name":"Vector","destination":"118w257","x":15.286835670471191,"y":65.75,"w":20.549514770507812,"h":15.5,"rotation":0,"parent":"118w118"}}},"205w2":{"id":"205w2","name":"Frame-4","clickableChildren":{"205w14":{"name":"dashicons:menu-alt2","type":"FRAME","x":5,"y":57,"rotation":0},"205w17":{"name":"Vector","destination":"118w257","x":15.286835670471191,"y":65.75,"w":20.549514770507812,"h":15.5,"rotation":0,"parent":"205w2"},"205w32":{"name":"Rectangle 74","destination":"118w118","x":116,"y":114,"w":11,"h":10,"rotation":0,"parent":"205w2"},"205w39":{"name":"Frame 4","type":"FRAME","x":26,"y":129,"rotation":0},"205w46":{"name":"Frame 6","type":"FRAME","x":42.3927001953125,"y":28.82474136352539,"rotation":0},"205w49":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":35,"y":72,"rotation":0},"205w60":{"name":"Frame 9","type":"FRAME","x":42.3927001953125,"y":877.8247680664062,"rotation":0},"205w63":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":35,"y":921,"rotation":0},"205w74":{"name":"Frame 7","type":"FRAME","x":40.3927001953125,"y":311.8247375488281,"rotation":0},"205w77":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":33,"y":355,"rotation":0},"205w88":{"name":"Frame 8","type":"FRAME","x":42.3927001953125,"y":594.8247680664062,"rotation":0},"205w91":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":35,"y":638,"rotation":0}}},"118w257":{"id":"118w257","name":"Frame-6","clickableChildren":{"118w269":{"name":"dashicons:menu-alt2","type":"FRAME","x":5,"y":57,"rotation":0},"118w292":{"name":"Frame 4","type":"FRAME","x":26,"y":138,"rotation":0},"118w299":{"name":"Frame 6","type":"FRAME","x":42.3927001953125,"y":28.82474136352539,"rotation":0},"118w302":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":35,"y":72,"rotation":0},"118w313":{"name":"Frame 9","type":"FRAME","x":42.3927001953125,"y":877.8247680664062,"rotation":0},"118w316":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":35,"y":921,"rotation":0},"118w327":{"name":"Frame 7","type":"FRAME","x":40.3927001953125,"y":311.8247375488281,"rotation":0},"118w330":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":33,"y":355,"rotation":0},"118w341":{"name":"Frame 8","type":"FRAME","x":42.3927001953125,"y":594.8247680664062,"rotation":0},"118w344":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":35,"y":638,"rotation":0},"138w3":{"name":"dashicons:arrow-left-alt2","type":"FRAME","x":284,"y":63,"rotation":0},"138w29":{"name":"bx:bxs-user","type":"FRAME","x":45,"y":195,"rotation":0},"138w32":{"name":"bx:bx-log-out","destination":"2w968","x":35,"y":856,"w":24,"h":24,"rotation":0,"parent":"118w257","type":"FRAME"},"138w20":{"name":"clarity:settings-solid","type":"FRAME","x":45,"y":283,"rotation":0},"138w26":{"name":"clarity:notification-solid","type":"FRAME","x":44,"y":238,"rotation":0},"138w4":{"name":"Vector","destination":"118w118","x":291,"y":101,"w":6,"h":12,"rotation":0}}},"133w0":{"id":"133w0","name":"Frame-5","clickableChildren":{"133w12":{"name":"dashicons:menu-alt2","type":"FRAME","x":5,"y":57,"rotation":0},"133w14":{"name":"Vector","destination":"118w257","x":15.286835670471191,"y":65.75,"w":20.549514770507812,"h":15.5,"rotation":0,"parent":"133w0"},"133w28":{"name":"Rectangle 74","destination":"118w118","x":116,"y":114,"w":11,"h":10,"rotation":0,"parent":"133w0"},"133w29":{"name":"Rectangle 75","destination":"118w118","x":206,"y":115,"w":11,"h":10,"rotation":0,"parent":"133w0"},"133w35":{"name":"Frame 4","type":"FRAME","x":26,"y":129,"rotation":0},"133w42":{"name":"Frame 6","type":"FRAME","x":42.3927001953125,"y":28.82474136352539,"rotation":0},"133w45":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":35,"y":72,"rotation":0},"133w56":{"name":"Frame 9","type":"FRAME","x":42.3927001953125,"y":877.8247680664062,"rotation":0},"133w59":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":35,"y":921,"rotation":0},"133w70":{"name":"Frame 7","type":"FRAME","x":40.3927001953125,"y":311.8247375488281,"rotation":0},"133w73":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":33,"y":355,"rotation":0},"133w84":{"name":"Frame 8","type":"FRAME","x":42.3927001953125,"y":594.8247680664062,"rotation":0},"133w87":{"name":"fluent:conference-room-16-regular","type":"FRAME","x":35,"y":638,"rotation":0}}},"118w254":{"id":"118w254","name":"Frame-3","clickableChildren":{"118w251":{"name":"Rectangle 2","destination":"118w118","x":220,"y":607,"w":83,"h":23,"rotation":0}}}};
+      const startFrameId = {"start":"2w968"};
+      const retina = true;
+      window.onload = function () {
+        // name is wrong, need to add the index!
+        let oneX = "images/" + frames[startFrameId["start"]].id + "-" + frames[startFrameId["start"]].name + ".png";
+        document.getElementById("content").src = oneX;
+        document.getElementById("content").className = frames[startFrameId["start"]].id;
+        if (retina === true) {
+          let twoX = "images/" + frames[startFrameId["start"]].id + "-" + frames[startFrameId["start"]].name + "@2x.png 2x";
+          document.getElementById("content").srcset = oneX + " 1x, " + twoX;
+        }
+        renderClickableAreas();
+      };
+
+      // Hide helper after 5 seconds
+      window.addEventListener("load", function () {
+        document.getElementById("helper").classList.remove("hidden");
+        setTimeout(function () {
+          document.getElementById("helper").className = 'hidden';
+        }, 5000);
+      });
+
+      // listen to keydown events
+      window.addEventListener("keydown", event => {
+        // R to go back to start
+        if (event.isComposing || KeyboardEvent.keyCode === 82) {
+          let oneX = "images/" + frames[startFrameId["start"]].id + "-" + frames[startFrameId["start"]].name + ".png";
+          document.getElementById("content").src = oneX;
+          document.getElementById("content").className = frames[startFrameId["start"]].id;
+          if (retina === true) {
+            let twoX = "images/" + frames[startFrameId["start"]].id + "-" + frames[startFrameId["start"]].name + "@2x.png 2x";
+            document.getElementById("content").srcset = oneX + " 1x, " + twoX;
+          }
+          document.documentElement.scrollTop = 0;
+        }
+        // H to hide the interface
+        if (event.isComposing || KeyboardEvent.keyCode === 72) {
+          if (document.getElementById("helper").className !== 'hidden') {
+            document.getElementById("helper").className = 'hidden';
+          } else {
+            document.getElementById("helper").className = '';
+          }
+        }
+      });
+      
+      function renderClickableAreas() {
+        let clickableDiv = document.getElementById("clickables");
+        if (clickableDiv.children.length > 0) {
+          clickableDiv.innerHTML = '';
+        }
+        
+        let currentFrame = document.getElementById("content").className;
+        for (let i = 0; i < Object.keys(frames[currentFrame].clickableChildren).length; i++) {
+          var newContent = document.createElement('div');
+          let layerName = Object.keys(frames[currentFrame].clickableChildren)[i];
+          let layer = frames[currentFrame].clickableChildren[layerName];
+          
+          if (layer.destination) {
+          newContent.style.position = 'absolute';
+          newContent.className = layerName;
+          newContent.style.width = layer.w + 'px';
+          newContent.style.height = layer.h + 'px';
+          newContent.style.top = layer.y + 'px';
+          newContent.style.left = layer.x + 'px';
+          newContent.style.cursor = 'pointer';
+          if (layer.parent && frames[currentFrame].clickableChildren[layer.parent]) {
+            let combinedY = layer.y + frames[currentFrame].clickableChildren[layer.parent].y; 
+            let combinedX = layer.x + frames[currentFrame].clickableChildren[layer.parent].x; 
+          newContent.style.top = combinedY + 'px';
+          newContent.style.left = combinedX + 'px';     
+          }
+          newContent.setAttribute("onclick", "navigateTo('"+layer.destination+"')");
+          
+          clickableDiv.appendChild(newContent);
+          }
+        }
+      }
+
+    function navigateTo(newFrameId) {
+      let oneX = "images/" + newFrameId + "-" + frames[newFrameId].name + ".png";
+      document.getElementById("content").className = newFrameId;
+      document.getElementById("content").src = oneX;
+      document.documentElement.scrollTop = 0;
+      if (retina === true) {
+        let twoX = "images/" + newFrameId + "-" + frames[newFrameId].name + "@2x.png 2x";
+        document.getElementById("content").srcset = oneX + " 1x, " + twoX;
+      }
+      renderClickableAreas();
+    }
+    </script>
+</head>
+<body>
+<div id="helper" class="hidden">
+    <ul>
+        <li>
+            <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.00318 2.52632C8.76035 2.52632 10.1864 3.94105 10.1864 5.68421C10.1864 6.09474 10.1037 6.48 9.95725 6.84L11.8163 8.68421C12.7776 7.88842 13.5352 6.85895 14 5.68421C12.8986 2.91158 10.1801 0.947368 6.99682 0.947368C6.1055 0.947368 5.25239 1.10526 4.46294 1.38947L5.83811 2.75368C6.201 2.60842 6.58936 2.52632 7.00318 2.52632ZM0.636653 0.802105L2.08822 2.24211L2.38108 2.53263C1.32424 3.34737 0.496589 4.43368 0 5.68421C1.10141 8.45684 3.81992 10.4211 7.00318 10.4211C7.99 10.4211 8.93224 10.2316 9.79172 9.89053L10.0591 10.1558L11.9245 12L12.7331 11.1979L1.4452 0L0.636653 0.802105ZM4.15734 4.29474L5.14416 5.27368C5.11232 5.40632 5.09322 5.54526 5.09322 5.68421C5.09322 6.73263 5.94634 7.57895 7.00318 7.57895C7.14325 7.57895 7.28331 7.56 7.41701 7.52842L8.40382 8.50737C7.97726 8.71579 7.50614 8.8421 7.00318 8.8421C5.24602 8.8421 3.81992 7.42737 3.81992 5.68421C3.81992 5.18526 3.94725 4.71789 4.15734 4.29474V4.29474ZM6.90132 3.80211L8.90678 5.79158L8.91951 5.69053C8.91951 4.64211 8.06639 3.79579 7.00955 3.79579L6.90132 3.80211Z"
+                      fill="white"/>
+            </svg>
+            Hide interface (H)
+        </li>
+        <li>
+            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 5L5 1M1 5L5 9M1 5H12C13.1046 5 14 5.89543 14 7V11" stroke="white" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Restart (R)
+        </li>
+
+    </ul>
+</div>
+<div id="clickables"></div>
+<img id="content" src=""/>
+</body>
+</html>
